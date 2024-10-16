@@ -58,7 +58,7 @@ def player_turn(player=int,player_selection=list,board=list) -> list:
         player - int representing the current player (0 or 1)
         player_selection - 2x1 Array representing which player is X and which player is O
     Returns:
-        None
+        board - a 3x3 array representing the updated board state
     '''
     player_choice = False
     while not player_choice:
