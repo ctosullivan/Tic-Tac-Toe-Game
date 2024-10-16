@@ -98,6 +98,12 @@ def check_game_over(board=list) -> any:
     # right-vertical win condition
     elif board[0][2] == board[1][2] and board[1][2] == board[2][2] and board[2][2] != "":
         return player_selection.index(board[2][2])
+    # left-diagonal win condition
+    elif board[0][0] == board[1][1] and board[1][1] == board[2][2] and board[2][2] != "":
+        return player_selection.index(board[2][2])
+    # right-diagonal win condition
+    elif board[0][2] == board[1][1] and board[1][1] == board[2][0] and board[2][0] != "":
+        return player_selection.index(board[2][0])
     else:
         for i in range(0,3):
             for j in range(0,3):          
